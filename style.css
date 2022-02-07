@@ -1,0 +1,19 @@
+.header {
+  width: 100%;
+  position: absolute;
+  height: 95vh;
+  background-image: linear-gradient(to bottom right, #7ed56f83, #28b485a9),
+    url("pexels-frans-van-heerden-624015.jpg");
+  background-size: cover;
+  background-position: center;
+  clip-path: polygon(0 0, 100% 0, 0 100%);
+}
+
+.header-1 {
+  height: 95vh;
+  background-image: linear-gradient(to bottom right, #7ed56f83, #28b485a9),
+    url("pexels-stein-egil-liland-3408744.jpg");
+  background-size: cover;
+  background-position: center;
+  clip-path: polygon(0 100%, 100% 0, 100% 100%);
+}
