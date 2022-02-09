@@ -1,19 +1,125 @@
-.header {
-  width: 100%;
-  position: absolute;
+html {
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0;
+}
+
+.intro {
   height: 95vh;
   background-image: linear-gradient(to bottom right, #7ed56f83, #28b485a9),
     url("pexels-frans-van-heerden-624015.jpg");
   background-size: cover;
   background-position: center;
-  clip-path: polygon(0 0, 100% 0, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
 }
 
-.header-1 {
-  height: 95vh;
-  background-image: linear-gradient(to bottom right, #7ed56f83, #28b485a9),
-    url("pexels-stein-egil-liland-3408744.jpg");
-  background-size: cover;
-  background-position: center;
-  clip-path: polygon(0 100%, 100% 0, 100% 100%);
+.intro__title {
+  text-align: center;
+}
+
+.intro__title--name,
+.intro__title--descrip {
+  color: white;
+  text-align: center;
+  letter-spacing: 2rem;
+  padding-top: 4rem;
+}
+
+.intro__btn {
+  text-decoration: none;
+  padding: 1rem 4rem;
+  background-color: white;
+  color: rgba(128, 128, 128, 0.753);
+  font-size: 20px;
+  border-radius: 20px;
+  position: relative;
+  display: inline-block;
+}
+
+.intro__title--name {
+  font-size: 6rem;
+  animation-name: niyozbek;
+  animation-duration: 1.2s;
+}
+
+.intro__title--descrip {
+  font-weight: 500;
+  font-size: 5.2rem;
+  padding-bottom: 4rem;
+  animation-name: niyoz;
+  animation-duration: 2s;
+}
+
+.intro__img--logo {
+  width: 6rem;
+  animation-name: logo;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+
+.intro__btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 1rem 2rem #333;
+}
+
+.intro__btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  z-index: -1;
+  border-radius: 2rem;
+}
+
+.intro__btn:hover::after {
+  transition: all 0.4s;
+  transform: scale(2);
+  opacity: 0;
+}
+
+@keyframes niyozbek {
+  0% {
+    opacity: 0;
+    transform: translateX(-20rem);
+  }
+  80% {
+    opacity: 0.8;
+    transform: translateX(2rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes niyoz {
+  0% {
+    transform: translateX(20rem);
+    opacity: 0;
+  }
+
+  80% {
+    opacity: 0.8;
+    transform: translateX(-2rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes btn-anim {
+  0% {
+    opacity: 0;
+    transform: translateY(10rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
