@@ -1,125 +1,107 @@
-html {
-  font-size: 62.5%;
-}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0; }
+
+a {
+  text-decoration: none; }
 
 body {
-  margin: 0;
-}
+  margin: 0; }
+
+html {
+  font-size: 62.5%; }
 
 .intro {
   height: 95vh;
-  background-image: linear-gradient(to bottom right, #7ed56f83, #28b485a9),
-    url("pexels-frans-van-heerden-624015.jpg");
-  background-size: cover;
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(85, 197, 122, 0.8)), url("/pexels-frans-van-heerden-624015.jpg");
   background-position: center;
-  clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
-}
+  background-size: cover;
+  clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%); }
+  .intro .intro__img--logo {
+    width: 5rem;
+    margin: 3rem 0 0 3rem; }
+  .intro .intro__title {
+    color: white;
+    text-align: center;
+    margin: 15rem 0 0; }
+    .intro .intro__title .intro__title--name {
+      font-size: 8rem;
+      margin: 0 0 2rem;
+      letter-spacing: 20px;
+      font-weight: 700;
+      animation-name: moveInLeft;
+      animation-duration: 1.5s;
+      animation-timing-function: ease-in; }
+    .intro .intro__title .intro__title--descrip {
+      margin-bottom: 10rem;
+      font-size: 3.2rem;
+      letter-spacing: 10px;
+      animation-name: moveInRight;
+      animation-duration: 1.5s;
+      animation-timing-function: ease-in; }
+    .intro .intro__title .intro__title--btn {
+      margin: 0 auto; }
 
-.intro__title {
-  text-align: center;
-}
-
-.intro__title--name,
-.intro__title--descrip {
-  color: white;
-  text-align: center;
-  letter-spacing: 2rem;
-  padding-top: 4rem;
-}
-
-.intro__btn {
-  text-decoration: none;
-  padding: 1rem 4rem;
-  background-color: white;
-  color: rgba(128, 128, 128, 0.753);
-  font-size: 20px;
-  border-radius: 20px;
-  position: relative;
+.intro__title--btn {
   display: inline-block;
-}
+  color: #333;
+  padding: 2rem 5rem;
+  background-color: white;
+  border-radius: 30px;
+  font-size: 1.6rem;
+  box-shadow: 0 10px 10px rgba(128, 128, 128, 0.438);
+  animation-name: moveInBottom;
+  position: relative;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-in; }
+  .intro__title--btn:hover {
+    transform: translateY(-1rem); }
 
-.intro__title--name {
-  font-size: 6rem;
-  animation-name: niyozbek;
-  animation-duration: 1.2s;
-}
-
-.intro__title--descrip {
-  font-weight: 500;
-  font-size: 5.2rem;
-  padding-bottom: 4rem;
-  animation-name: niyoz;
-  animation-duration: 2s;
-}
-
-.intro__img--logo {
-  width: 6rem;
-  animation-name: logo;
-  animation-duration: 3s;
-  animation-iteration-count: infinite;
-}
-
-.intro__btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 1rem 2rem #333;
-}
-
-.intro__btn::after {
+.intro__title--btn::after {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: white;
-  z-index: -1;
-  border-radius: 2rem;
-}
+  border-radius: 10px;
+  z-index: 1;
+  opacity: 1; }
 
-.intro__btn:hover::after {
-  transition: all 0.4s;
+.intro__title--btn:hover::after {
   transform: scale(2);
   opacity: 0;
-}
+  transition: all 0.8s; }
 
-@keyframes niyozbek {
+@keyframes moveInRight {
   0% {
-    opacity: 0;
-    transform: translateX(-20rem);
-  }
+    transform: translate(10rem);
+    opacity: 0; }
   80% {
-    opacity: 0.8;
-    transform: translateX(2rem);
-  }
+    transform: translate(-1rem); }
   100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
+    transform: translate(0);
+    opacity: 1; } }
 
-@keyframes niyoz {
+@keyframes moveInLeft {
   0% {
-    transform: translateX(20rem);
-    opacity: 0;
-  }
-
+    transform: translate(-10rem);
+    opacity: 0; }
   80% {
-    opacity: 0.8;
-    transform: translateX(-2rem);
-  }
+    transform: translate(1rem); }
   100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
+    transform: translate(0);
+    opacity: 1; } }
 
-@keyframes btn-anim {
+@keyframes moveInBottom {
   0% {
-    opacity: 0;
-    transform: translateY(10rem);
-  }
+    transform: translateY(7rem);
+    opacity: 0; }
   100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
+    transform: translate(0);
+    opacity: 1; } }
