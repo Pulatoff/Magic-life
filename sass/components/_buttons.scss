@@ -1,0 +1,21 @@
+.btn-text {
+  padding: 3px;
+  transition: all 0.2s;
+  &:link,
+  &:visited {
+    font-size: 1.6rem;
+    color: $mainMedium;
+    text-decoration: none;
+    border-bottom: 1px solid $mainMedium;
+    display: inline-block;
+  }
+  &:hover {
+    color: white;
+    background-color: $mainMedium;
+
+    transform: translateY(-3px);
+  }
+  &:active {
+    transform: translateY(0);
+  }
+}

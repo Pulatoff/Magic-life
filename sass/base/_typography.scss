@@ -7,3 +7,53 @@ h6,
 p {
   margin: 0;
 }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #333;
+}
+p {
+  color: #555;
+}
+
+.intro__title {
+  .intro__title--name,
+  .intro__title--descrip {
+    color: white;
+  }
+}
+
+.heading--secondary {
+  font-size: 3.6rem;
+  text-transform: uppercase;
+  background-image: linear-gradient(to right, $mainMedium, $mainDark);
+  display: inline-block;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  transition: all 0.2s;
+  text-shadow: 0 1.5rem 3rem rgba($blackcolor, 0.4);
+  letter-spacing: 2px;
+
+  &:hover {
+    transform: skewY(5deg) skewX(15deg);
+  }
+}
+
+.heading-tertiary {
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.text-box {
+  font-size: 1.6rem;
+  line-height: 1.5;
+  &:not(:last-child) {
+    margin-bottom: 3rem;
+  }
+}

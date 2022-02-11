@@ -1,23 +1,20 @@
 .row {
   max-width: $gridWidth;
   margin: 0 auto;
-  background-color: #eee;
 
   &:not(:last-child) {
     margin-bottom: $space-vertical;
   }
   [class^="col-"] {
-    background-color: orangered;
     float: left;
-    height: 5rem;
+
     &:not(:last-child) {
       margin-right: $space-vertical;
     }
   }
   .col-1-of-2 {
-    background-color: orangered;
     float: left;
-    height: 5rem;
+    position: relative;
 
     width: calc((100% - #{$space-vertical}) / 2);
     &:not(:last-child) {
