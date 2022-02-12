@@ -1,0 +1,17 @@
+.feature {
+  z-index: -1000;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(126, 213, 111, 0.6),
+      rgba(85, 197, 122, 0.6)
+    ),
+    url("../../img/nat-4.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding: 22rem 0;
+
+  transform: skewY(-7deg);
+  > * {
+    transform: skewY(7deg);
+  }
+}
