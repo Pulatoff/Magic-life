@@ -1,1 +1,1 @@
-# Animation-css
+# Magic life
