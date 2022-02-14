@@ -16,3 +16,13 @@ ul {
   padding: 0;
   margin: 0;
 }
+h1::selection,
+h2::selection,
+h3::selection,
+h4::selection,
+h5::selection,
+h6::selection,
+p::selection {
+  background-color: #55c57a;
+  color: white;
+}

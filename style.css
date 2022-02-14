@@ -13,6 +13,16 @@ ul {
   padding: 0;
   margin: 0; }
 
+h1::selection,
+h2::selection,
+h3::selection,
+h4::selection,
+h5::selection,
+h6::selection,
+p::selection {
+  background-color: #55c57a;
+  color: white; }
+
 h1,
 h2,
 h3,
@@ -158,6 +168,10 @@ p {
     width: calc( 2 * ((100% - (3 * 8rem)) / 4) + 8rem); }
   .row .col-3-of-4 {
     width: calc( 3 * ((100% - (3 * 8rem)) / 4) + 2 * (8rem)); }
+
+.stories {
+  padding: 15rem 0;
+  position: relative; }
 
 .intro__title--btn {
   display: inline-block;
@@ -372,7 +386,7 @@ p {
     transform: rotateY(0deg); }
 
 .tours {
-  padding: 30rem 0 70rem 0;
+  padding: 30rem 0 30rem 0;
   background-color: #f7f7f7; }
 
 .tour__ul {
@@ -389,3 +403,61 @@ p {
     color: #777; }
     .tour__ul--li:not(:last-child) {
       border-bottom: 1px solid rgba(119, 119, 119, 0.205); }
+
+.story {
+  max-width: 75%;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.767);
+  box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.397);
+  border-radius: 3px;
+  padding: 8rem;
+  font-size: 1.6rem;
+  transform: skewX(-12deg); }
+  .story > * {
+    transform: skewX(12deg); }
+  .story__img {
+    shape-outside: circle(50% at 50% 50%);
+    -webkit-shape-outside: circle(50% at 50% 50%);
+    width: 15rem;
+    height: 15rem;
+    clip-path: circle(50% at 50% 50%);
+    float: left;
+    position: relative;
+    transform: skewX(12deg) translate(-2rem, -1rem); }
+    .story__img--box {
+      height: 100%;
+      transition: all 1s; }
+    .story__img--caption {
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 1.7rem;
+      text-align: center;
+      text-transform: uppercase;
+      font-weight: 700;
+      opacity: 0;
+      transition: all 1s; }
+      .story__img--caption p {
+        color: white; }
+  .story:hover .story__img--caption {
+    top: 50%;
+    opacity: 1; }
+  .story:hover .story__img--box {
+    transform: scale(1.2);
+    filter: blur(30px);
+    filter: brightness(80%); }
+
+.story__video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0.15;
+  z-index: -3;
+  overflow: hidden; }
+  .story__video--content {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; }
