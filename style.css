@@ -9,6 +9,10 @@ body {
 html {
   font-size: 62.5%; }
 
+ul {
+  padding: 0;
+  margin: 0; }
+
 h1,
 h2,
 h3,
@@ -67,6 +71,34 @@ p {
   color: transparent;
   margin-bottom: 1rem; }
 
+.cart-side-back-p {
+  font-size: 3.2rem;
+  color: white;
+  text-align: center; }
+
+.cart-side-back-pr {
+  font-size: 5.2rem;
+  font-weight: 200;
+  color: white; }
+
+.tour__title--span {
+  position: absolute;
+  bottom: 0;
+  right: 2rem;
+  padding: 1rem 1.5rem;
+  box-decoration-break: clone; }
+  .tour__title--span p {
+    text-transform: uppercase;
+    text-align: right;
+    color: white;
+    font-size: 2.8rem; }
+  .tour__title--span-1 {
+    background-image: linear-gradient(to right bottom, rgba(255, 185, 0, 0.85), rgba(255, 119, 48, 0.85)); }
+  .tour__title--span-2 {
+    background-image: linear-gradient(to right bottom, #7ed56f, #28b485); }
+  .tour__title--span-3 {
+    background-image: linear-gradient(to right bottom, #2998ff, #5643fa); }
+
 .btn-text {
   padding: 3px;
   transition: all 0.2s; }
@@ -82,6 +114,20 @@ p {
     transform: translateY(-3px); }
   .btn-text:active {
     transform: translateY(0); }
+
+.tour__btn {
+  text-align: center; }
+  .tour__btn--a {
+    box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.185);
+    display: inline-block;
+    font-size: 2rem;
+    color: white;
+    background-image: linear-gradient(to right bottom, #7ed56f, #28b485);
+    padding: 1rem 3rem;
+    border-radius: 3rem; }
+    .tour__btn--a:hover {
+      background-image: linear-gradient(to right bottom, #28b485, #7ed56f);
+      transform: translateY(-5px); }
 
 .row {
   max-width: 114rem;
@@ -228,6 +274,14 @@ p {
 .u-margin-boottom--small {
   margin-bottom: 2rem; }
 
+.pad {
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4rem 0; }
+
 .composition {
   position: relative; }
   .composition__photo {
@@ -271,3 +325,67 @@ p {
   box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.164); }
   .feature-box:hover {
     transform: scale(1.05); }
+
+.cart {
+  position: relative;
+  width: 100%;
+  perspective: 200rem;
+  -webkit-perspective: 200rem; }
+  .cart-side {
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    backface-visibility: hidden;
+    transition: all 1s ease;
+    width: 100%;
+    height: 50rem;
+    box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.425);
+    border-radius: 5px; }
+    .cart-side-front {
+      background-color: white;
+      z-index: -1; }
+      .cart-side-front .tour-img {
+        background-image: linear-gradient(to right, #ffb900, #ff7730), url(../../img/nat-5.jpg);
+        background-size: cover;
+        background-position: center;
+        background-blend-mode: screen;
+        width: 100%;
+        height: 45%;
+        clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
+        position: relative; }
+        .cart-side-front .tour-img-2 {
+          background-image: linear-gradient(to right, #55c57a, #28b485), url(../../img/nat-6.jpg); }
+        .cart-side-front .tour-img-3 {
+          background-image: linear-gradient(to right, #2998ff, #5643fa), url(../../img/nat-7.jpg); }
+    .cart-side-back {
+      position: absolute;
+      transform: rotateY(-180deg); }
+      .cart-side-back-1 {
+        background-image: linear-gradient(to right bottom, rgba(255, 185, 0, 0.85), rgba(255, 119, 48, 0.85)); }
+      .cart-side-back-2 {
+        background-image: linear-gradient(to right bottom, #7ed56f, #28b485); }
+      .cart-side-back-3 {
+        background-image: linear-gradient(to right bottom, #2998ff, #5643fa); }
+  .cart:hover .cart-side-front {
+    transform: rotateY(180deg); }
+  .cart:hover .cart-side-back {
+    transform: rotateY(0deg); }
+
+.tours {
+  padding: 30rem 0 70rem 0;
+  background-color: #f7f7f7; }
+
+.tour__ul {
+  padding: 0 3rem;
+  margin: 2rem 0;
+  list-style: none;
+  text-align: center;
+  display: flex;
+  gap: 1.5rem;
+  flex-direction: column; }
+  .tour__ul--li {
+    padding-bottom: 5px;
+    font-size: 1.6rem;
+    color: #777; }
+    .tour__ul--li:not(:last-child) {
+      border-bottom: 1px solid rgba(119, 119, 119, 0.205); }

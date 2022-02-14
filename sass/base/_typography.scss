@@ -67,3 +67,47 @@ p {
   color: transparent;
   margin-bottom: 1rem;
 }
+
+.cart-side-back- {
+  &p {
+    font-size: 3.2rem;
+    color: white;
+    text-align: center;
+  }
+  &pr {
+    font-size: 5.2rem;
+    font-weight: 200;
+    color: white;
+  }
+}
+
+.tour__title--span {
+  position: absolute;
+  bottom: 0;
+  right: 2rem;
+  padding: 1rem 1.5rem;
+  box-decoration-break: clone;
+  p {
+    text-transform: uppercase;
+    text-align: right;
+    color: white;
+    font-size: 2.8rem;
+  }
+  &-1 {
+    background-image: linear-gradient(
+      to right bottom,
+      rgba(255, 185, 0, 0.85),
+      rgba(255, 119, 48, 0.85)
+    );
+  }
+  &-2 {
+    background-image: linear-gradient(to right bottom, $mainLight, $mainDark);
+  }
+  &-3 {
+    background-image: linear-gradient(
+      to right bottom,
+      $color-tertiary-light-1,
+      $color-tertiary-light-2
+    );
+  }
+}

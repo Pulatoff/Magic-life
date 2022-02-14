@@ -23,3 +23,12 @@
 .u-margin-boottom--small {
   margin-bottom: 2rem;
 }
+
+.pad {
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4rem 0;
+}

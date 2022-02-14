@@ -19,3 +19,20 @@
     transform: translateY(0);
   }
 }
+
+.tour__btn {
+  text-align: center;
+  &--a {
+    box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.185);
+    display: inline-block;
+    font-size: 2rem;
+    color: white;
+    background-image: linear-gradient(to right bottom, $mainLight, $mainDark);
+    padding: 1rem 3rem;
+    border-radius: 3rem;
+    &:hover {
+      background-image: linear-gradient(to right bottom, $mainDark, $mainLight);
+      transform: translateY(-5px);
+    }
+  }
+}

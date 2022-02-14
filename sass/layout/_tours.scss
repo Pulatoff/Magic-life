@@ -1,0 +1,22 @@
+.tours {
+  padding: 30rem 0 70rem 0;
+  background-color: $bg-color;
+}
+
+.tour__ul {
+  padding: 0 3rem;
+  margin: 2rem 0;
+  list-style: none;
+  text-align: center;
+  display: flex;
+  gap: 1.5rem;
+  flex-direction: column;
+  &--li {
+    padding-bottom: 5px;
+    font-size: 1.6rem;
+    color: #777;
+    &:not(:last-child) {
+      border-bottom: 1px solid rgba(119, 119, 119, 0.205);
+    }
+  }
+}
