@@ -228,6 +228,43 @@ p {
   top: 6.5rem;
   opacity: 1; }
 
+.section__footer {
+  background-color: #333;
+  padding: 10rem; }
+
+.footer__navbar {
+  float: left;
+  width: 100%;
+  height: 12rem; }
+  .footer__navbar--items {
+    padding-top: 2rem;
+    border-top: 1px solid #777;
+    list-style: none;
+    display: inline-block;
+    height: 100%;
+    gap: 1rem; }
+    .footer__navbar--items li {
+      font-size: 1.4rem;
+      display: inline-block;
+      text-transform: uppercase; }
+      .footer__navbar--items li a {
+        color: white;
+        padding: 0.5rem;
+        transition: all 0.4s;
+        display: inline-block; }
+        .footer__navbar--items li a:hover {
+          box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.5);
+          color: #55c57a;
+          transform: rotate(20deg) scale(1.2); }
+
+.footer__descrip {
+  width: 80%;
+  float: right;
+  padding-top: 2rem;
+  border-top: 1px solid #777;
+  color: white;
+  font-size: 1.4rem; }
+
 .intro__title--btn {
   display: inline-block;
   color: #333;
