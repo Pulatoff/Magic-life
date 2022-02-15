@@ -15,6 +15,43 @@
     />
   </head>
   <body>
+    <div class="navigation">
+      <input id="nav-check" type="checkbox" class="navigation__checkbox" />
+      <label for="nav-check" class="navigation__label">
+        <span class="navigation__icon"></span>
+      </label>
+
+      <div class="navigation__background"></div>
+      <div class="navigation__menu">
+        <ul class="navigation__list">
+          <li class="navigation__item">
+            <a onclick="HideFunc()" href="#about" class="navigation__link"
+              >01 about magicLife</a
+            >
+          </li>
+          <li class="navigation__item">
+            <a onclick="HideFunc()" href="#benefit" class="navigation__link"
+              >02 Your Benifit</a
+            >
+          </li>
+          <li class="navigation__item">
+            <a onclick="HideFunc()" href="#tour" class="navigation__link"
+              >03 Popular
+            </a>
+          </li>
+          <li class="navigation__item">
+            <a onclick="HideFunc()" href="#story" class="navigation__link"
+              >04 Stories</a
+            >
+          </li>
+          <li class="navigation__item">
+            <a onclick="HideFunc()" href="#book" class="navigation__link"
+              >05 Booknow</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
     <div class="intro">
       <img class="intro__img--logo" src="./img/logo-white.pnggit " alt="" />
       <div class="intro__title">
@@ -28,7 +65,7 @@
       </div>
     </div>
 
-    <section class="about">
+    <section id="about" class="about">
       <div class="u-text-center">
         <h2 class="heading--secondary u-margin-boottom--big">
           Exciting tours for adventure people
@@ -76,7 +113,7 @@
         </div>
       </div>
     </section>
-    <section class="feature u-margin-top--big">
+    <section id="benefit" class="feature u-margin-top--big">
       <div class="row">
         <div class="col-1-of-4">
           <div class="feature-box u-text-center">
@@ -120,7 +157,7 @@
         </div>
       </div>
     </section>
-    <section class="tours u-margin-top--big">
+    <section id="#tours" class="tours u-margin-top--big">
       <div class="u-text-center">
         <h2 class="heading--secondary u-margin-boottom--big">
           Most popular tours
@@ -147,7 +184,7 @@
               <div class="pad">
                 <p class="cart-side-back-p">only</p>
                 <h4 class="cart-side-back-pr">$297</h4>
-                <a href="#" class="cart-side-back-btn intro__title--btn"
+                <a href="#popup" class="cart-side-back-btn intro__title--btn"
                   >book now</a
                 >
               </div>
@@ -174,7 +211,7 @@
               <div class="pad">
                 <p class="cart-side-back-p">only</p>
                 <h4 class="cart-side-back-pr">$497</h4>
-                <a href="#" class="cart-side-back-btn intro__title--btn"
+                <a href="#popup" class="cart-side-back-btn intro__title--btn"
                   >book now</a
                 >
               </div>
@@ -201,7 +238,7 @@
               <div class="pad">
                 <p class="cart-side-back-p">only</p>
                 <h4 class="cart-side-back-pr">$997</h4>
-                <a href="#" class="cart-side-back-btn intro__title--btn"
+                <a href="#popup" class="cart-side-back-btn intro__title--btn"
                   >book now</a
                 >
               </div>
@@ -213,7 +250,7 @@
         <a href="#" class="tour__btn--a">discover all tours</a>
       </div>
     </section>
-    <section class="stories">
+    <section id="story" class="stories">
       <div class="story__video">
         <video class="story__video--content" autoplay muted loop>
           <source src="/img/video.mp4" type="video/mp4" />
@@ -270,7 +307,7 @@
         </div>
       </div>
     </section>
-    <section class="book-now">
+    <section id="book" class="book-now">
       <div class="row">
         <div class="book">
           <div class="book__form">
@@ -345,5 +382,44 @@
         </div>
       </div>
     </footer>
+    <div class="popup" id="popup">
+      <div class="popup__content">
+        <div class="popup__flex">
+          <div class="popup__left">
+            <img src="/img/nat-8.jpg" alt="" />
+            <img src="/img/nat-9.jpg" alt="" />
+          </div>
+          <div class="popup__right">
+            <a href="#tours" class="btn__quit">X</a>
+            <h2 class="heading--secondary">start booking now</h2>
+            <h3 class="heading-tertiary">
+              IMPORTANT – PLEASE READ THESE TERMS BEFORE BOOKINGs
+            </h3>
+            <div class="popup__text--content">
+              <p class="popup__text text-box">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus
+                nemo aperiam neque rerum perspiciatis labore aut accusantium
+                distinctio provident explicabo accusamus non aspernatur, hic
+                blanditiis nobis. Facere, delectus veniam quaerat quod non
+                minima est tempora blanditiis eaque quasi omnis
+              </p>
+              <p class="popup__text text-box">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus
+                nemo aperiam neque rerum perspiciatis labore aut accusantium
+                distinctio provident explicabo accusamus non aspernatur, hic
+                blanditiis nobis. Facere, delectus veniam quaerat quod non
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="tour__btn u-margin-bottom--medium">
+          <a href="#" class="tour__btn--a">book now</a>
+        </div>
+      </div>
+    </div>
+    <script>
+      const HideFunc = (e) =>
+        (document.getElementById("nav-check").checked = false);
+    </script>
   </body>
 </html>
